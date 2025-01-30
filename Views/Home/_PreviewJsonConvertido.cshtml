@@ -1,0 +1,24 @@
+﻿@using System.Data
+@model DataTable
+
+<table id="preview-json-convertido" class="table table-striped" style="border: 1px solid black;">
+	<thead style="background: #dcdcdc;">
+		<tr>
+			@foreach (var colunas in Model.Columns)
+			{
+				<th>@colunas.ToString()</th>
+			}
+		</tr>
+	</thead>
+	<tbody>
+		@for (var i = 0; i < Model.Rows.Count; i++)
+		{
+			<tr>
+				@foreach (var linha in Model.Rows[i].ItemArray)
+				{
+					<td>@linha.ToString()</td>
+				}
+			</tr>
+		}
+	</tbody>
+</table>

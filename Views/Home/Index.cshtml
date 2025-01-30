@@ -1,0 +1,41 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+
+	<div class="col-md-12">
+		<p><label for="input-json">Insira o objeto Json:</label></p>
+		<textarea id="input-json" name="input-json" rows="8" cols="60"></textarea>
+	</div>
+
+	<div class="row mt-3">
+		<div class="col-md-4 text-center">
+			<button id="btn-preview-csv" class="btn btn-full btn-primary"><span class="fa fa-eye"></span> Preview CSV</button>
+		</div>
+		<div class="col-md-4 text-center">
+			<button id="btn-converter-json" class="btn btn-full btn-success"><span class="fa fa-arrow-right-arrow-left"></span> Converter Json para CSV</button>
+		</div>
+		<div class="col-md-4 text-center">
+			<button id="btn-limpar-dados" class="btn btn-full btn-danger"><span class="fa fa-broom"></span> Limpar dados</button>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+		<div class="my-3 card">
+			<div class="card-header">
+				<h5> Preview Json convertido em CSV </h5>
+			</div>
+		</div>
+
+		<div id="preview-json-convertido" class="p-15" style="display: none;">
+		</div>
+	</div>
+
+</div>
+
+<link rel="stylesheet" href="~/fontawesome/css/all.min.css">
+
+<script src="~/fontawesome/js/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
